@@ -14,6 +14,7 @@ emojis_dictionary = {
     ':-V': '😖', ':-)': '🙂', ':-(': '🙁'
 }
 
+
 def convert_emoji(input_string):
     broken_string = input_string.split(' ')
     
@@ -22,7 +23,8 @@ def convert_emoji(input_string):
         ans = emojis_dictionary.get(broken, broken)
         output_string += ans + " "
         
-    print('>',output_string)
+    return '> ' + output_string
+
 
 while(1):
     print("To exit type 'q'")
@@ -30,4 +32,4 @@ while(1):
     if input_string == 'q':
         break
     else:
-        convert_emoji(input_string)
+        print(convert_emoji(input_string))
